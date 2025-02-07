@@ -4,22 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIFV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link rel="stylesheet" href="layout.css"> <!-- Link to external CSS file -->
     <style>
         body {
-            font-family: Lora, sans-serif;
+            font-family: 'Lora', sans-serif;
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #FB4D42;
             color: white;
             padding: 10px;
             text-align: center;
         }
+
         .container {
             padding: 20px;
             text-align: center;
         }
+
+        .panel-set {
+            display: none; /* Hide all panel sets initially */
+        }
+
+        .panel-set.active {
+            display: block; /* Display the active panel set */
+        }
+
+        .panel {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .panel img {
+            width: 100%;
+            height: auto;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
         button {
             background-color: #008CBA;
             color: white;
@@ -28,6 +57,7 @@
             cursor: pointer;
             font-size: 16px;
         }
+
         button:hover {
             background-color: #45a049;
         }
@@ -39,9 +69,84 @@
     </header>
     
     <div class="container">
-        <p>This page is designed to be responsive and look great on mobile devices.</p>
-        <button>Click Me</button>
+        <!-- Panel sets -->
+        <div class="panel-set active" id="set1">
+            <div class="panel">
+                <img src="panel1.jpg" alt="Panel 1">
+                <p>Caption 1</p>
+            </div>
+            <div class="panel">
+                <img src="panel2.jpg" alt="Panel 2">
+                <p>Caption 2</p>
+            </div>
+            <div class="panel">
+                <img src="panel3.jpg" alt="Panel 3">
+                <p>Caption 3</p>
+            </div>
+        </div>
+        <div class="panel-set" id="set2">
+            <div class="panel">
+                <img src="panel4.jpg" alt="Panel 4">
+                <p>Caption 4</p>
+            </div>
+            <div class="panel">
+                <img src="panel5.jpg" alt="Panel 5">
+                <p>Caption 5</p>
+            </div>
+            <div class="panel">
+                <img src="panel6.jpg" alt="Panel 6">
+                <p>Caption 6</p>
+            </div>
+        </div>
+        <div class="panel-set" id="set3">
+            <div class="panel">
+                <img src="panel7.jpg" alt="Panel 7">
+                <p>Caption 7</p>
+            </div>
+            <div class="panel">
+                <img src="panel8.jpg" alt="Panel 8">
+                <p>Caption 8</p>
+            </div>
+            <div class="panel">
+                <img src="panel9.jpg" alt="Panel 9">
+                <p>Caption 9</p>
+            </div>
+        </div>
+        <div class="panel-set" id="set4">
+            <div class="panel">
+                <img src="panel10.jpg" alt="Panel 10">
+                <p>Caption 10</p>
+            </div>
+            <div class="panel">
+                <img src="panel11.jpg" alt="Panel 11">
+                <p>Caption 11</p>
+            </div>
+            <div class="panel">
+                <img src="panel12.jpg" alt="Panel 12">
+                <p>Caption 12</p>
+            </div>
+        </div>
+        <div class="panel-set" id="set5">
+            <div class="panel">
+                <img src="panel13.jpg" alt="Panel 13">
+                <p>Caption 13</p>
+            </div>
+            <div class="panel">
+                <img src="panel14.jpg" alt="Panel 14">
+                <p>Caption 14</p>
+            </div>
+            <div class="panel">
+                <img src="panel15.jpg" alt="Panel 15">
+                <p>Caption 15</p>
+            </div>
+        </div>
+
+        <!-- Navigation button -->
+        <div class="button-container">
+            <button id="nextButton">Next Set</button>
+        </div>
     </div>
+
     <script src="main.js"></script>
 </body>
 </html>
