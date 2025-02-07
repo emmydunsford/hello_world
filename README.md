@@ -1,4 +1,4 @@
-# prototype_iteration
+# 
 
 fml 
-logging first day of protyping 2/7/25 
+logging first day of working on this 2/7/25 
