@@ -10,5 +10,9 @@ function flipPanel(panelId) {
 
     // Then, show the panel group associated with the clicked panel
     const activePanelGroup = document.getElementById(panelId);
+    
+    // Log for debugging
+    console.log(`Showing panel group: ${panelId}`);
+
     activePanelGroup.style.display = 'block';
 }

@@ -35,7 +35,7 @@ header {
     display: none;
 }
 
-/* Optional: Add some hover effect for the panels */
+/* Add hover effect for panels */
 .panel:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
