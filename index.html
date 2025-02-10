@@ -1,47 +1,68 @@
-<!-- Front page: Panels 1A, 2A, 3A -->
-<div class="panel" id="panel1A" onclick="flipPanel('panel1')">
-    <img src="panel1.jpg" alt="Panel 1A">
-    <p>Caption 1A</p>
-</div>
-<div class="panel" id="panel2A" onclick="flipPanel('panel2')">
-    <img src="panel2.jpg" alt="Panel 2A">
-    <p>Caption 2A</p>
-</div>
-<div class="panel" id="panel3A" onclick="flipPanel('panel3')">
-    <img src="panel3.jpg" alt="Panel 3A">
-    <p>Caption 3A</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIFV</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>BRIEFING</h1>
+    </header>
 
-<!-- Panel groups (hidden by default) -->
-<div class="panel-group" id="panel1">
-    <div class="panel" id="panel1B">
-        <img src="panel1B.jpg" alt="Panel 1B">
-        <p>Caption 1B</p>
-    </div>
-    <div class="panel" id="panel1C">
-        <img src="panel1C.jpg" alt="Panel 1C">
-        <p>Caption 1C</p>
-    </div>
-</div>
+    <div class="container">
+        <!-- Front page: Panels 1A, 2A, 3A -->
+        <div class="panel" id="panel1A" onclick="flipPanel('panel1')">
+            <img src="panel1.jpg" alt="Panel 1A">
+            <p>Caption 1A</p>
+        </div>
+        <div class="panel" id="panel2A" onclick="flipPanel('panel2')">
+            <img src="panel2.jpg" alt="Panel 2A">
+            <p>Caption 2A</p>
+        </div>
+        <div class="panel" id="panel3A" onclick="flipPanel('panel3')">
+            <img src="panel3.jpg" alt="Panel 3A">
+            <p>Caption 3A</p>
+        </div>
 
-<div class="panel-group" id="panel2">
-    <div class="panel" id="panel2B">
-        <img src="panel2B.jpg" alt="Panel 2B">
-        <p>Caption 2B</p>
-    </div>
-    <div class="panel" id="panel2C">
-        <img src="panel2C.jpg" alt="Panel 2C">
-        <p>Caption 2C</p>
-    </div>
-</div>
+        <!-- Panel groups (hidden by default) -->
+        <div class="panel-group" id="panel1">
+            <div class="panel" id="panel1B">
+                <img src="panel1B.jpg" alt="Panel 1B">
+                <p>Caption 1B</p>
+            </div>
+            <div class="panel" id="panel1C">
+                <img src="panel1C.jpg" alt="Panel 1C">
+                <p>Caption 1C</p>
+            </div>
+        </div>
 
-<div class="panel-group" id="panel3">
-    <div class="panel" id="panel3B">
-        <img src="panel3B.jpg" alt="Panel 3B">
-        <p>Caption 3B</p>
+        <div class="panel-group" id="panel2">
+            <div class="panel" id="panel2B">
+                <img src="panel2B.jpg" alt="Panel 2B">
+                <p>Caption 2B</p>
+            </div>
+            <div class="panel" id="panel2C">
+                <img src="panel2C.jpg" alt="Panel 2C">
+                <p>Caption 2C</p>
+            </div>
+        </div>
+
+        <div class="panel-group" id="panel3">
+            <div class="panel" id="panel3B">
+                <img src="panel3B.jpg" alt="Panel 3B">
+                <p>Caption 3B</p>
+            </div>
+            <div class="panel" id="panel3C">
+                <img src="panel3C.jpg" alt="Panel 3C">
+                <p>Caption 3C</p>
+            </div>
+        </div>
     </div>
-    <div class="panel" id="panel3C">
-        <img src="panel3C.jpg" alt="Panel 3C">
-        <p>Caption 3C</p>
-    </div>
-</div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="main.js"></script> 
+</body>
+</html>
