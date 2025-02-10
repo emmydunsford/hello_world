@@ -1,20 +1,23 @@
 // main.js
 
-// Function to flip the panel
-function flipPanel(panelId) {
-    // First, hide all panel groups
-    const panelGroups = document.querySelectorAll('.panel-group');
-    panelGroups.forEach(group => {
-        group.style.display = 'none';
-    });
+// Get all the panel sets and the next button
+const panelSets = document.querySelectorAll('.panel-set');
+const nextButton = document.getElementById('nextButton');
 
-    // Hide all front page panels
-    const frontPagePanels = document.querySelectorAll('.panel');
-    frontPagePanels.forEach(panel => {
-        panel.style.display = 'none';
-    });
+// Initialize the current set index
+let currentSetIndex = 0;
 
-    // Then, show the panel group associated with the clicked panel
-    const activePanelGroup = document.getElementById(panelId);
-    activePanelGroup.style.display = 'block';
+// Function to show the next set of panels
+function showNextSet() {
+    // Hide the current set
+    panelSets[currentSetIndex].classList.remove('active');
+    
+    // Move to the next set
+    currentSetIndex = (currentSetIndex + 1) % panelSets.length;
+
+    // Show the next set
+    panelSets[currentSetIndex].classList.add('active');
 }
+
+// Event listener for the Next Set button
+nextButton.addEventListener('click', showNextSet);
