@@ -8,11 +8,13 @@ function flipPanel(panelId) {
         group.style.display = 'none';
     });
 
+    // Hide all front page panels
+    const frontPagePanels = document.querySelectorAll('.panel');
+    frontPagePanels.forEach(panel => {
+        panel.style.display = 'none';
+    });
+
     // Then, show the panel group associated with the clicked panel
     const activePanelGroup = document.getElementById(panelId);
-    
-    // Log for debugging
-    console.log(`Showing panel group: ${panelId}`);
-
     activePanelGroup.style.display = 'block';
 }
