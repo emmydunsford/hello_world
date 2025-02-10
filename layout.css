@@ -1,9 +1,27 @@
-/* Hide panel groups by default */
-.panel-group {
-    display: none;
+/* layout.css */
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Styling for the panels */
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Container styles */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Panel styles */
 .panel {
     display: inline-block;
     width: 30%;
@@ -12,16 +30,13 @@
     cursor: pointer;
 }
 
-.panel img {
-    width: 100%;
-    height: auto;
+/* Initially hide all panel groups */
+.panel-group {
+    display: none;
 }
 
-/* Optional: add a flip effect */
-.panel {
-    transition: transform 0.3s ease-in-out;
-}
-
-.panel.clicked {
-    transform: rotateY(180deg);
+/* Optional: Add some hover effect for the panels */
+.panel:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }

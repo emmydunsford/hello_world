@@ -1,20 +1,14 @@
+// main.js
+
 // Function to flip the panel
 function flipPanel(panelId) {
-    const panelGroup = document.getElementById(panelId); // Get the corresponding panel group
+    // First, hide all panel groups
+    const panelGroups = document.querySelectorAll('.panel-group');
+    panelGroups.forEach(group => {
+        group.style.display = 'none';
+    });
 
-    // Find the current visible panel and the next one
-    const panels = panelGroup.getElementsByClassName('panel');
-    let currentPanel = Array.from(panels).find(panel => !panel.classList.contains('flipped'));
-    
-    if (currentPanel) {
-        // Mark the current panel as flipped
-        currentPanel.classList.add('flipped');
-        currentPanel.style.display = 'none';
-
-        // Show the next panel (if any)
-        const nextPanel = currentPanel.nextElementSibling;
-        if (nextPanel) {
-            nextPanel.style.display = 'inline-block';
-        }
-    }
+    // Then, show the panel group associated with the clicked panel
+    const activePanelGroup = document.getElementById(panelId);
+    activePanelGroup.style.display = 'block';
 }
