@@ -20,17 +20,18 @@ header {
 /* Panel Set (for navigation between sets) */
 .panel-set {
     display: none; /* Hide all panel sets initially */
+    margin-top: 20px; /* Add margin to space out panels vertically */
 }
 
 .panel-set.active {
     display: block; /* Display the active panel set */
 }
 
-/* Panel Styles */
+/* Panel Styles - stacked vertically */
 .panel {
-    display: inline-block;
-    width: 30%;
-    margin: 10px;
+    display: block; /* Change from inline-block to block for stacking */
+    width: 80%; /* Adjust width for a better view */
+    margin: 10px auto; /* Center the panel and add spacing between them */
     text-align: center;
     perspective: 1000px; /* Enable 3D effect for flipping */
     cursor: pointer; /* Make panels clickable */
@@ -45,7 +46,7 @@ header {
     transform-style: preserve-3d;
 }
 
-/* Front face of the PANEL */
+/* Front face of the panel */
 .panel-front, .panel-back {
     position: absolute;
     width: 100%;
