@@ -1,23 +1,28 @@
-// main.js
+document.addEventListener("DOMContentLoaded", () => {
+    const panels = document.querySelectorAll(".panel");
 
-// Get all the panel sets and the next button
-const panelSets = document.querySelectorAll('.panel-set');
-const nextButton = document.getElementById('nextButton');
+    panels.forEach(panel => {
+        panel.addEventListener("click", () => {
+            // Log the current class list of the panel when it's clicked
+            console.log(panel.classList); // This will show the class list of the clicked panel
 
-// Initialize the current set index
-let currentSetIndex = 0;
+            // Toggle the 'flipped' class when a panel is clicked
+            panel.classList.toggle("flipped");
+        });
+    });
 
-// Function to show the next set of panels
-function showNextSet() {
-    // Hide the current set
-    panelSets[currentSetIndex].classList.remove('active');
-    
-    // Move to the next set
-    currentSetIndex = (currentSetIndex + 1) % panelSets.length;
+    // Handle the "Next Set" button to change to the next panel set
+    const nextButton = document.getElementById("nextButton");
+    let currentSet = 1;
 
-    // Show the next set
-    panelSets[currentSetIndex].classList.add('active');
-}
+    nextButton.addEventListener("click", () => {
+        // Hide the current set
+        document.getElementById(`set${currentSet}`).classList.remove("active");
 
-// Event listener for the Next Set button
-nextButton.addEventListener('click', showNextSet);
+        // Show the next set
+        currentSet++;
+        if (currentSet <= 5) {  // Assuming there are 5 sets
+            document.getElementById(`set${currentSet}`).classList.add("active");
+        }
+    });
+});
