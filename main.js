@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Handle the "Next Set" button to change to the next panel set
+    // HANDLE the "Next Set" button to change to the next panel set
     const nextButton = document.getElementById("nextButton");
     let currentSet = 1;
 

@@ -45,7 +45,7 @@ header {
     transform-style: preserve-3d;
 }
 
-/* Front face of the panel */
+/* Front face of the PANEL */
 .panel-front, .panel-back {
     position: absolute;
     width: 100%;
