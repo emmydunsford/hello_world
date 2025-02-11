@@ -17,24 +17,19 @@ header {
     text-align: center;
 }
 
-/* Panel Set (for navigation between sets) */
-.panel-set {
-    display: none; /* Hide all panel sets initially */
-    margin-top: 20px; /* Add margin to space out panels vertically */
-}
-
-.panel-set.active {
-    display: block; /* Display the active panel set */
-}
-
-/* Panel Styles - stacked vertically */
+/* Panel styles */
 .panel {
-    display: block; /* Change from inline-block to block for stacking */
-    width: 80%; /* Adjust width for a better view */
-    margin: 10px auto; /* Center the panel and add spacing between them */
+    display: inline-block; /* Default to inline-block for larger screens */
+    width: 30%; /* For larger screens */
+    margin: 10px;
     text-align: center;
     perspective: 1000px; /* Enable 3D effect for flipping */
     cursor: pointer; /* Make panels clickable */
+}
+
+/* Make sure the active panel is shown */
+.panel.active {
+    display: block;
 }
 
 /* Container that holds the front and back of the panel */
@@ -46,7 +41,7 @@ header {
     transform-style: preserve-3d;
 }
 
-/* Front face of the panel */
+/* Panel front and back styles */
 .panel-front, .panel-back {
     position: absolute;
     width: 100%;
@@ -58,28 +53,21 @@ header {
     text-align: center;
 }
 
-/* Front face styling */
 .panel-front {
     background-color: #f0f0f0;
 }
 
-/* Back face styling */
 .panel-back {
     background-color: #ccc;
     transform: rotateY(180deg); /* Initially flip the back */
 }
 
-/* Panel image */
 .panel img {
     max-width: 90%;
     max-height: 80%;
 }
 
-/* Button container */
-.button-container {
-    margin-top: 20px;
-}
-
+/* Button styling */
 button {
     background-color: #008CBA;
     color: white;
@@ -96,4 +84,19 @@ button:hover {
 /* Flip effect when panel is clicked */
 .panel.flipped .panel-inner {
     transform: rotateY(180deg); /* Flip the panel */
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) { 
+    .panel {
+        display: block; /* Stack vertically on smaller screens */
+        width: 90%; /* Adjust width for better fit on mobile */
+        margin: 10px auto; /* Center the panel and add spacing between them */
+    }
+}
+
+@media (max-width: 480px) {
+    .panel {
+        width: 100%; /* Ensure panels take full width on very small screens */
+    }
 }
